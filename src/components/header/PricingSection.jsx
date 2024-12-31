@@ -9,7 +9,7 @@ const PricingSection = ({ isDarkTheme }) => {
       features: [
         "Kickstart your DSA and interview preparation journey with our free AlgoBoost Linktree! 🚀✨ Access a treasure trove of expertly curated study materials and interview prep resources, crafted by industry experts to help you excel. If you're confident in self-preparation and ready to take charge of your future, this is your ultimate toolkit. Dive in and make it happen! ",
       ],
-      buttonText: "Visit LinkTre",
+      buttonText: "Visit LinkTree",
       buttonClass: "bg-blue-500 hover:bg-blue-600 text-white",
       formLink:
         "https://ablink.netlify.app/",
