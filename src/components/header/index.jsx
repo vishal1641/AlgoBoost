@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 // import { useAuth } from "../../contexts/authContext";
 // import { doSignOut } from "../../firebase/auth";
 import "aos/dist/aos.css"; // Import AOS styles;
@@ -9,16 +9,12 @@ import FAQ from "./FAQ.jsx";
 import Footer from "./Footer";
 import WhyChooseUs from "./WhyChooseUs";
 import AOS from "aos";
-import { saveAs } from "file-saver";
+
 
 import PricingSection from "./PricingSection";
 import { FaLaptopCode } from "react-icons/fa";
 import {
-  FaGithub,
-  FaInstagram,
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
+  
   FaMousePointer,
 } from "react-icons/fa";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
