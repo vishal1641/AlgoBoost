@@ -17,7 +17,7 @@ const RollingGallery = ({ images = [] }) => {
               transform: `rotateY(${index * angleStep}deg) translateZ(${radius}px)`,
             }}
           >
-           <img src={url} alt="DE SHAW"/>
+           <img src={url} alt=""/>
 
           </div>
         ))}
@@ -27,3 +27,5 @@ const RollingGallery = ({ images = [] }) => {
 };
 
 export default RollingGallery;
+
+

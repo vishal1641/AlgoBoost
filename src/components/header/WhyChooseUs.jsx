@@ -32,7 +32,7 @@ const WhyChooseUs = ({ isDarkTheme }) => {
       
       <div className="reasons-container"  >
         {reasons.map((reason, index) => (
-          <div className="reason-card" key={index}  style={{backgroundColor: isDarkTheme ? "#100101" : "#fffacd"}}>
+          <div className="reason-card" key={index}  style={{backgroundColor: isDarkTheme ? "#100101" : "white"}}>
             <div className="icon">{reason.icon}</div>
             <h3 className="reason-title" style={{color:"#DC143C"}}>{reason.title}</h3>
             <p className="reason-description" style={{color: isDarkTheme ? "white" : "black"}}>{reason.description}</p>
