@@ -208,9 +208,9 @@ const Header = () => {
     setIsDarkTheme((prevTheme) => !prevTheme);
   };
 
-  const handleExploreMoreClick = () => {
-    navigate("/explore");
-  };
+  // const handleExploreMoreClick = () => {
+  //   navigate("/explore");
+  // };
 
   return (
     <>
@@ -345,8 +345,8 @@ const Header = () => {
 
       {/* Bouncing Circular "Explore More" Div */}
       <div
-        onClick={handleExploreMoreClick} // Handle click to navigate to explore page
-        className={`hidden md:block fixed bottom-10 left-10 w-11 h-20 rounded-full border-2 flex items-center align-middle justify-center cursor-pointer transition-all duration-300 ${
+       
+        className={`hidden md:block fixed bottom-10 left-10 w-12 h-26 rounded-full border-2 flex items-center align-middle justify-center transition-all duration-300 ${
           isDarkTheme ? "border-white text-white" : "border-black text-black"
         }`}
         style={{
@@ -360,15 +360,15 @@ const Header = () => {
           className="font-bold"
           style={{
             marginLeft: "2px",
-            fontSize: "10px",
+            fontSize: "10 px",
             textAlign: "center", // Center text inside the div
           }}
         >
-          Explore More
+         Scroll to Explore More
         </span>
-        <FaMousePointer
+        {/* <FaMousePointer
           className="mt-7 ml-2 absolute bottom-0 w-4 h-4 text-white-500 animate-bounce" // Add mouse pointer animation
-        />
+        /> */}
       </div>
 
       
