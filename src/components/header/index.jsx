@@ -116,9 +116,10 @@ const Header = () => {
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=GL HITACHI",
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=COGNIZANT",
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=CAPGEMINI",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=DE SHAW & CO",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=Q SPIDER",
+    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=DE.SHAW",
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=GIRIKON",
+    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=QSPIDER",
+    
   ];
 
   const navigate = useNavigate();
