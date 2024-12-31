@@ -58,57 +58,57 @@ const Header = () => {
   ];
 
   // Inline styles for the card gallery
-  const cardGalleryStyle = {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)", // 3 cards per row on desktop
-    gap: "20px",
-    padding: "20px",
-    justifyItems: "center",
-    "@media (max-width: 768px)": {
-      gridTemplateColumns: "1fr", // 1 card per row on mobile
-    },
-  };
+  // const cardGalleryStyle = {
+  //   display: "grid",
+  //   gridTemplateColumns: "repeat(3, 1fr)", // 3 cards per row on desktop
+  //   gap: "20px",
+  //   padding: "20px",
+  //   justifyItems: "center",
+  //   "@media (max-width: 768px)": {
+  //     gridTemplateColumns: "1fr", // 1 card per row on mobile
+  //   },
+  // };
 
-  const cardStyle = {
-    background: "transparent", // Transparent background
-    borderRadius: "15px 0px 15px 0",
-    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.6)",
-    overflow: "hidden",
-    transition: "transform 0.3s ease",
-    width: "100%",
-    height: "200px",
+  // const cardStyle = {
+  //   background: "transparent", // Transparent background
+  //   borderRadius: "15px 0px 15px 0",
+  //   boxShadow: "0 4px 10px rgba(0, 0, 0, 0.6)",
+  //   overflow: "hidden",
+  //   transition: "transform 0.3s ease",
+  //   width: "100%",
+  //   height: "200px",
 
-    maxWidth: "300px", // Max width for cards
-    backdropFilter: "blur(10px)", // Blur effect
-  };
+  //   maxWidth: "300px", // Max width for cards
+  //   backdropFilter: "blur(10px)", // Blur effect
+  // };
 
-  const cardContentStyle = {
-    padding: "20px",
-    color: "grey",
-    fontWeight: "400",
-    textAlign: "center",
-  };
+  // const cardContentStyle = {
+  //   padding: "20px",
+  //   color: "grey",
+  //   fontWeight: "400",
+  //   textAlign: "center",
+  // };
 
-  const cardButtonStyle = {
-    padding: "10px 20px",
+  // const cardButtonStyle = {
+  //   padding: "10px 20px",
 
-    backgroundColor: "red",
-    color: "white",
-    border: "none",
-    width: "80px",
-    borderRadius: "10px",
-    cursor: "pointer",
-    fontSize: "0.8rem",
-    transition: "background-color 0.3s ease",
-  };
+  //   backgroundColor: "red",
+  //   color: "white",
+  //   border: "none",
+  //   width: "80px",
+  //   borderRadius: "10px",
+  //   cursor: "pointer",
+  //   fontSize: "0.8rem",
+  //   transition: "background-color 0.3s ease",
+  // };
 
-  const cardButtonHoverStyle = {
-    backgroundColor: "#ff3d00",
-  };
+  // const cardButtonHoverStyle = {
+  //   backgroundColor: "#ff3d00",
+  // };
 
-  const cardHoverStyle = {
-    transform: "translateY(-10px)",
-  };
+  // const cardHoverStyle = {
+  //   transform: "translateY(-10px)",
+  // };
   const images = [
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=TCS",
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=YAMAHA",
@@ -132,28 +132,7 @@ const Header = () => {
       once: true, // Only animate once
     });
   }, []);
-  const names = [
-    "TCS",
-    "Yamaha",
-    "Samsung",
-    "Cognizant",
-    "Capgemini",
-    "Girikon",
-    "GL Hitachi",
-    "DE Shaw & CO",
-    "Amazon",
-    "Deloitte",
-    "IBM",
-    "Google",
-    "InfoEdge",
-    "Schlumberger",
-    "Infor",
-    "TechMahindra",
-    "Q Spider",
-    "HCL",
-    "L&T",
-    "BYJUS's",
-  ];
+ 
 
   useEffect(() => {
     if (true) {
@@ -163,7 +142,7 @@ const Header = () => {
       document.body.style.backgroundColor = "";
       setStars([]);
     }
-  }, [true, isDarkTheme]);
+  }, [ isDarkTheme]);
 
   const generateRandomStars = () => {
     const numberOfStars = 110;
@@ -265,35 +244,7 @@ const Header = () => {
           ></div>
         </div>
 
-        {/* <div className="flex items-center space-x-4 flex-wrap">
-          {userLoggedIn ? (
-            <button
-              onClick={() => {
-                doSignOut().then(() => {
-                  navigate("/login");
-                });
-              }}
-              className="px-6 py-3 bg-gradient-to-r from-black to-black text-white text-sm font-medium border-white shadow-xl transform transition duration-300 ease-in-out hover:scale-105 hover:from-red-600 hover:to-red-700 hover:shadow-2xl active:scale-95"
-            >
-              Logout
-            </button>
-          ) : (
-            <>
-              <Link
-                to={"/login"}
-                className="px-3 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white text-sm font-medium rounded-full hover:from-green-500 hover:to-blue-600 shadow-md transition duration-300"
-              >
-                Login
-              </Link>
-              <Link
-                to={"/register"}
-                className="px-3 py-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white text-sm font-medium rounded-full hover:from-purple-500 hover:to-pink-600 shadow-md transition duration-300"
-              >
-                Create Account
-              </Link>
-            </>
-          )}
-        </div> */}
+        
       </nav>
 
 
