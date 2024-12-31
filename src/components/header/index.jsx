@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {  useNavigate } from "react-router-dom";
-// import { useAuth } from "../../contexts/authContext";
-// import { doSignOut } from "../../firebase/auth";
+import { useNavigate } from "react-router-dom";
+
 import "aos/dist/aos.css"; // Import AOS styles;
 import RollingGallery from "./RollingGallery";
 import TeamSection from "./TeamSection";
@@ -10,13 +9,9 @@ import Footer from "./Footer";
 import WhyChooseUs from "./WhyChooseUs";
 import AOS from "aos";
 
-
 import PricingSection from "./PricingSection";
 import { FaLaptopCode } from "react-icons/fa";
-import {
-  
-  FaMousePointer,
-} from "react-icons/fa";
+
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 
 const Header = () => {
@@ -57,58 +52,7 @@ const Header = () => {
     },
   ];
 
-  // Inline styles for the card gallery
-  // const cardGalleryStyle = {
-  //   display: "grid",
-  //   gridTemplateColumns: "repeat(3, 1fr)", // 3 cards per row on desktop
-  //   gap: "20px",
-  //   padding: "20px",
-  //   justifyItems: "center",
-  //   "@media (max-width: 768px)": {
-  //     gridTemplateColumns: "1fr", // 1 card per row on mobile
-  //   },
-  // };
-
-  // const cardStyle = {
-  //   background: "transparent", // Transparent background
-  //   borderRadius: "15px 0px 15px 0",
-  //   boxShadow: "0 4px 10px rgba(0, 0, 0, 0.6)",
-  //   overflow: "hidden",
-  //   transition: "transform 0.3s ease",
-  //   width: "100%",
-  //   height: "200px",
-
-  //   maxWidth: "300px", // Max width for cards
-  //   backdropFilter: "blur(10px)", // Blur effect
-  // };
-
-  // const cardContentStyle = {
-  //   padding: "20px",
-  //   color: "grey",
-  //   fontWeight: "400",
-  //   textAlign: "center",
-  // };
-
-  // const cardButtonStyle = {
-  //   padding: "10px 20px",
-
-  //   backgroundColor: "red",
-  //   color: "white",
-  //   border: "none",
-  //   width: "80px",
-  //   borderRadius: "10px",
-  //   cursor: "pointer",
-  //   fontSize: "0.8rem",
-  //   transition: "background-color 0.3s ease",
-  // };
-
-  // const cardButtonHoverStyle = {
-  //   backgroundColor: "#ff3d00",
-  // };
-
-  // const cardHoverStyle = {
-  //   transform: "translateY(-10px)",
-  // };
+ 
   const images = [
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=TCS",
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=YAMAHA",
@@ -119,11 +63,10 @@ const Header = () => {
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=DE.SHAW",
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=GIRIKON",
     "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=QSPIDER",
-    
   ];
 
-  const navigate = useNavigate();
-  
+ 
+
   const [stars, setStars] = useState([]);
   const [isDarkTheme, setIsDarkTheme] = useState(true);
 
@@ -133,7 +76,6 @@ const Header = () => {
       once: true, // Only animate once
     });
   }, []);
- 
 
   useEffect(() => {
     if (true) {
@@ -143,7 +85,7 @@ const Header = () => {
       document.body.style.backgroundColor = "";
       setStars([]);
     }
-  }, [ isDarkTheme]);
+  }, [isDarkTheme]);
 
   const generateRandomStars = () => {
     const numberOfStars = 110;
@@ -228,13 +170,11 @@ const Header = () => {
           style={{
             cursor: "pointer",
             transition:
-            
               "transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease",
             fontSize: "25px",
           }}
         >
           AlgoBoost.
-          
           <div
             className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 opacity-0 group-hover:opacity-30 transition duration-500 ease-in-out"
             style={{
@@ -244,108 +184,104 @@ const Header = () => {
             }}
           ></div>
         </div>
-
-        
       </nav>
 
-
       {/* {userLoggedIn && ( */}
-        <>
-        
-          <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-            {stars.map((star, index) => (
-              <div
-                key={index}
-                style={{
-                  width: star.size + "px",
-                  height: star.size + "px",
-                  left: star.left,
-                  top: star.top,
-                  borderRadius: "50%",
-                  backgroundColor: isDarkTheme ? "white" : "black",
-                  position: "absolute",
-                  transition: "all 0.2s ease-in-out",
-                  animation: "twinkle 1s infinite",
-                }}
-                className="absolute"
-              />
-            ))}
-          </div>
-          <div
-            className={`absolute top-28 left-1/2 transform -translate-x-1/2 rounded-lg p-6 text-center shadow-2xl w-full sm:w-auto ${
-              isDarkTheme ? "text-white" : "text-black"
-            }`}
+      <>
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+          {stars.map((star, index) => (
+            <div
+              key={index}
+              style={{
+                width: star.size + "px",
+                height: star.size + "px",
+                left: star.left,
+                top: star.top,
+                borderRadius: "50%",
+                backgroundColor: isDarkTheme ? "white" : "black",
+                position: "absolute",
+                transition: "all 0.2s ease-in-out",
+                animation: "twinkle 1s infinite",
+              }}
+              className="absolute"
+            />
+          ))}
+        </div>
+        <div
+          className={`absolute top-28 left-1/2 transform -translate-x-1/2 rounded-lg p-6 text-center shadow-2xl w-full sm:w-auto ${
+            isDarkTheme ? "text-white" : "text-black"
+          }`}
+          style={{
+            opacity: 1,
+            transition: "ease-in-out",
+            minHeight: "300px",
+            padding: "2rem",
+          }}
+        >
+          <h2
+            className="font-extrabold font-poppins mb-4"
             style={{
-              opacity: 1,
-              transition: "ease-in-out",
-              minHeight: "300px",
-              padding: "2rem",
+              fontSize: "2.5rem",
             }}
           >
-         
-            <h2
-              className="font-extrabold font-poppins mb-4"
+            About Us.
+          </h2>
+          <p className=" font-calibri text-m mb-3">
+            Welcome to &nbsp;
+            <span
               style={{
-                fontSize: "2.5rem",
+                color: "red",
+                fontFamily: "sans-serif",
+                fontSize: "20px",
               }}
             >
-              About Us.
-            </h2>
-            <p className=" font-calibri text-m mb-3">
-              Welcome to &nbsp;
-              <span
-                style={{
-                  color: "red",
-                  fontFamily: "sans-serif",
-                  fontSize: "20px",
-                }}
-              >
-                AlgoBoost 🌟<br />
-              </span>
-              Gear up for success with AlgoBoost, your one-stop solution for
-              mastering DSA, core CS concepts, and competitive programming. Our
-              curated DSA sheets, including company-specific problem sets, are
-              designed to boost your problem-solving skills and prepare you for
-              interviews. <br /> <br />Elevate your preparation with our Basic and Premium
-              Plans, offering personalized one-on-one sessions with your final year
-              seniors placed at top companies. Unlock your potential, achieve your
-              goals, and let AlgoBoost be your partner in success! 🚀
-            </p>
+              AlgoBoost 🌟
+              <br />
+            </span>
+            Gear up for success with AlgoBoost, your one-stop solution for
+            mastering DSA, core CS concepts, and competitive programming. Our
+            curated DSA sheets, including company-specific problem sets, are
+            designed to boost your problem-solving skills and prepare you for
+            interviews. <br /> <br />
+            Elevate your preparation with our Basic and Premium Plans, offering
+            personalized one-on-one sessions with your final year seniors placed
+            at top companies. Unlock your potential, achieve your goals, and let
+            AlgoBoost be your partner in success! 🚀
+          </p>
 
-            <div className="flex justify-center space-x-4 mt-6 flex-wrap">
-              <button
-                onClick={handleDownloadRoadmap}
-                className={`px-6 py-3 border text-sm font-medium rounded-full transition duration-300 ${
-                  isDarkTheme
-                    ? "bg-transparent border-white text-white hover:bg-white/40 hover:text-white"
-                    : "bg-transparent border-black text-black hover:bg-black/10 hover:text-black"
-                }`}
-              >
-                DSA Roadmap
-              </button>
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://docs.google.com/spreadsheets/d/1Et1PWOEuDz25_KDjGCHALastZXhBNKXvJi4LT-gpei4/edit?gid=0#gid=0",
-                    "_blank"
-                  )
-                }
-                className={`px-6 py-3 border text-sm font-medium rounded-full transition duration-300 ${
-                  isDarkTheme
-                    ? "bg-transparent border-white text-white hover:bg-white/40 hover:text-white"
-                    : "bg-transparent border-black text-black hover:bg-black/10 hover:text-black"
-                }`}
-              >
-                Tcs Sheet
-              </button>
-            </div>
+          <div className="flex justify-center space-x-4 mt-6 flex-wrap">
+            <button
+              onClick={handleDownloadRoadmap}
+              className={`px-6 py-3 border text-sm font-medium rounded-full transition duration-300 ${
+                isDarkTheme
+                  ? "bg-transparent border-white text-white hover:bg-white/40 hover:text-white"
+                  : "bg-transparent border-black text-black hover:bg-black/10 hover:text-black"
+              }`}
+            >
+              DSA Roadmap
+            </button>
+            <button
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/spreadsheets/d/1Et1PWOEuDz25_KDjGCHALastZXhBNKXvJi4LT-gpei4/edit?gid=0#gid=0",
+                  "_blank"
+                )
+              }
+              className={`px-6 py-3 border text-sm font-medium rounded-full transition duration-300 ${
+                isDarkTheme
+                  ? "bg-transparent border-white text-white hover:bg-white/40 hover:text-white"
+                  : "bg-transparent border-black text-black hover:bg-black/10 hover:text-black"
+              }`}
+            >
+              Tcs Sheet
+            </button>
           </div>
-        </>
+        </div>
+      </>
       {/* )} */}
 
       {/* Bouncing Circular "Explore More" Div */}
       <div
-       
         className={`hidden md:block fixed bottom-10 left-10 w-12 h-26 rounded-full border-2 flex items-center align-middle justify-center transition-all duration-300 ${
           isDarkTheme ? "border-white text-white" : "border-black text-black"
         }`}
@@ -364,82 +300,80 @@ const Header = () => {
             textAlign: "center", // Center text inside the div
           }}
         >
-         Scroll to Explore More
+          Scroll to Explore More
         </span>
         {/* <FaMousePointer
           className="mt-7 ml-2 absolute bottom-0 w-4 h-4 text-white-500 animate-bounce" // Add mouse pointer animation
         /> */}
       </div>
 
-      
-
       {/* Theme Toggle Button */}
       {/* {userLoggedIn && ( */}
+      <div
+        className="absolute right-5 top-20"
+        style={{
+          zIndex: 10,
+        }}
+      >
         <div
-          className="absolute right-5 top-20"
-          style={{
-            zIndex: 10,
-          }}
+          className={` border-2 rounded-full p-2 ${
+            isDarkTheme ? "border-white" : "border-black"
+          }`}
         >
-          <div
-            className={` border-2 rounded-full p-2 ${
-              isDarkTheme ? "border-white" : "border-black"
-            }`}
+          <button
+            onClick={toggleTheme}
+            className="text-3xl bg-transparent border-none cursor-pointer"
+            style={{
+              padding: "8px",
+              borderRadius: "50%",
+              transition: "transform 0.3s ease-in-out",
+            }}
           >
-            <button
-              onClick={toggleTheme}
-              className="text-3xl bg-transparent border-none cursor-pointer"
-              style={{
-                padding: "8px",
-                borderRadius: "50%",
-                transition: "transform 0.3s ease-in-out",
-              }}
-            >
-              {isDarkTheme ? (
-                <BsFillSunFill className="w-6 h-6 text-yellow-400" />
-              ) : (
-                <BsFillMoonFill className="w-6 h-6 text-silver-500" />
-              )}
-            </button>
-          </div>
+            {isDarkTheme ? (
+              <BsFillSunFill className="w-6 h-6 text-yellow-400" />
+            ) : (
+              <BsFillMoonFill className="w-6 h-6 text-silver-500" />
+            )}
+          </button>
         </div>
+      </div>
       {/* )} */}
 
       <div>
         {/* {userLoggedIn && ( */}
-          <div
+        <div
+          style={{
+            marginTop: "675px", // Ensures it appears 100px below the icons
+            padding: "36px",
+          }}
+        >
+          <h2
             style={{
-              marginTop: "675px", // Ensures it appears 100px below the icons
-              padding: "36px",
+              textAlign: "center",
+              marginBottom: "16px",
+              color: isDarkTheme ? "white" : "black",
+
+              fontSize: "30px", // Default size
+              fontFamily: "Overpass,sans-serif",
+              fontWeight: "600",
             }}
+            className="software-companies-title"
           >
-            <h2
-              style={{
-                textAlign: "center",
-                marginBottom: "16px",
-                color: isDarkTheme ? "white" : "black",
+            Major Software Companies at BIT, Sindri.
+          </h2>
 
-                fontSize: "30px", // Default size
-                fontFamily: "Overpass,sans-serif",
-                fontWeight: "600",
-              }}
-              className="software-companies-title"
-            >
-              Major Software Companies at BIT, Sindri.
-            </h2>
-
-            <style>
-              {`
+          <style>
+            {`
     @media (max-width: 768px) {
       
     }
   `}
-            </style>
-          </div>
+          </style>
+        </div>
         {/* )} */}
 
         {/* Media Query for Mobile View */}
-       
+
         <div
           style={{
             position: "relative",
@@ -454,82 +388,81 @@ const Header = () => {
         </div>
       </div>
       {/* {userLoggedIn && ( */}
-        <>
-          <div>
-            <RollingGallery isDarkTheme={isDarkTheme} images={images} />
-          </div>
-          <h2
-            style={{
-              textAlign: "center",
-              marginTop: "20px",
-              marginBottom: "11px",
-              color: "grey",
-              fontSize: "60px", // Default size
-              fontFamily: "Overpass,sans-serif",
-              fontWeight: "600",
-            }}
-            className="software-companies-title"
-          >
-            <span style={{ color: isDarkTheme ? "white" : "black" }}>
-              DSA Sheets.
-            </span>
-          </h2>
+      <>
+        <div>
+          <RollingGallery isDarkTheme={isDarkTheme} images={images} />
+        </div>
+        <h2
+          style={{
+            textAlign: "center",
+            marginTop: "20px",
+            marginBottom: "11px",
+            color: "grey",
+            fontSize: "60px", // Default size
+            fontFamily: "Overpass,sans-serif",
+            fontWeight: "600",
+          }}
+          className="software-companies-title"
+        >
+          <span style={{ color: isDarkTheme ? "white" : "black" }}>
+            DSA Sheets.
+          </span>
+        </h2>
 
-          <section
-            className="why-choose-us"
-            style={{ backgroundColor: isDarkTheme ? "#100101" : "#e5e4e2" }}
-          >
-            <div className="reasons-container">
-              {reasons.map((reason, index) => (
-                <div
-                  className="reason-card"
-                  key={index}
+        <section
+          className="why-choose-us"
+          style={{ backgroundColor: isDarkTheme ? "#100101" : "#e5e4e2" }}
+        >
+          <div className="reasons-container">
+            {reasons.map((reason, index) => (
+              <div
+                className="reason-card"
+                key={index}
+                style={{
+                  backgroundColor: isDarkTheme ? "#100101" : "white",
+                  border: isDarkTheme ? "1px solid grey" : "none",
+                }}
+              >
+                <div className="icon">{reason.icon}</div>
+                <h3
+                  className="reason-title"
                   style={{
-                    backgroundColor: isDarkTheme ? "#100101" : "white",
-                    border: isDarkTheme ? "1px solid grey" : "none",
+                    color: isDarkTheme ? "white" : "black",
+                    fontSize: "20px",
+                    fontWeight: "bold",
                   }}
                 >
-                  <div className="icon">{reason.icon}</div>
-                  <h3
-                    className="reason-title"
-                    style={{
-                      color: isDarkTheme ? "white" : "black",
-                      fontSize: "20px",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    {reason.title}
-                  </h3>
-                  <p className="reason-description" style={{ color: "grey" }}>
-                    {reason.description}
-                  </p>
-                  <button
-                  style={{color:"red", border:"1px solid grey"}}
-                    onClick={() => handleSheetOpen(reason.sheetLink)}
-                    className={`mt-6 px-4 py-3 border text-sm font-medium rounded-full transition duration-300 ${
-                      true
-                        ? "bg-transparent border-white text-white hover:bg-blue/40 hover:text-black"
-                        : "bg-transparent border-black text-black hover:bg-black/10 hover:text-white"
-                    }`}
-                  >
-                    Solve-->
-                  </button>
-                </div>
-              ))}
-            </div>
-          </section>
-        </>
+                  {reason.title}
+                </h3>
+                <p className="reason-description" style={{ color: "grey" }}>
+                  {reason.description}
+                </p>
+                <button
+                  style={{ color: "red", border: "1px solid grey" }}
+                  onClick={() => handleSheetOpen(reason.sheetLink)}
+                  className={`mt-6 px-4 py-3 border text-sm font-medium rounded-full transition duration-300 ${
+                    true
+                      ? "bg-transparent border-white text-white hover:bg-blue/40 hover:text-black"
+                      : "bg-transparent border-black text-black hover:bg-black/10 hover:text-white"
+                  }`}
+                >
+                  Solve-->
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
+      </>
       {/* )} */}
       {/* {userLoggedIn && ( */}
-        <>
-      
-          <WhyChooseUs isDarkTheme={isDarkTheme} />
+      <>
+        <WhyChooseUs isDarkTheme={isDarkTheme} />
 
-          <PricingSection isDarkTheme={isDarkTheme} />
-          <TeamSection isDarkTheme={isDarkTheme} />
-          <FAQ  isDarkTheme={isDarkTheme}/>
-          <Footer />
-        </>
+        <PricingSection isDarkTheme={isDarkTheme} />
+        <TeamSection isDarkTheme={isDarkTheme} />
+        <FAQ isDarkTheme={isDarkTheme} />
+        <Footer />
+      </>
       {/* )} */}
     </>
   );
