@@ -1,6 +1,5 @@
 
-import { FaInstagram } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6";
+
 import React from "react";
 import { useSpring, animated } from "react-spring";
 import "./TeamSection.css";

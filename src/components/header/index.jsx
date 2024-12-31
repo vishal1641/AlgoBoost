@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 import "aos/dist/aos.css"; // Import AOS styles;
 import RollingGallery from "./RollingGallery";
@@ -305,13 +305,11 @@ const Header = () => {
         >
           Scroll Down.
         </span>
-        {/* <FaMousePointer
-          className="mt-7 ml-2 absolute bottom-0 w-4 h-4 text-white-500 animate-bounce" // Add mouse pointer animation
-        /> */}
+        
       </div>
 
       {/* Theme Toggle Button */}
-      {/* {userLoggedIn && ( */}
+      
       <div
         className="absolute right-5 top-20"
         style={{
