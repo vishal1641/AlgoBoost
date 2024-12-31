@@ -13,6 +13,7 @@ const Home = () => {
 
   return (
     
+    
     <div className="relative">
       {/* Popup Message */}
       {showPopup && (
