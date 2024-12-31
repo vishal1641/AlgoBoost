@@ -140,7 +140,7 @@ const PricingSection = ({ isDarkTheme }) => {
         className="section-title"
         style={{ color: isDarkTheme ? "white" : "black" }}
       >
-        Choose Your Plan
+       Our Services.
       </h2>
       <div className="pricing-cards" styles={{ backgroundColor: "#fffafa" }}>
         {plans.map((plan, index) => (

@@ -15,6 +15,9 @@ import { FaLaptopCode } from "react-icons/fa";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 
 const Header = () => {
+
+
+  
   const reasons = [
     {
       icon: <FaLaptopCode size={40} color="#4CAF50" />,
@@ -288,7 +291,8 @@ const Header = () => {
           backgroundColor: "transparent",
           justifyContent: "center",
           alignItems: "center",
-          height:"82px"
+          height:"82px",
+          marginLeft:"0.01%"
         }}
       >
         <span
