@@ -1,0 +1,131 @@
+.pricing-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0f0f0f;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    margin-top: 30px;
+  }
+  
+  .pricing-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .pricing-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .feature-item {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .pricing-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pricing-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .pricing-cards {
+      gap: 20px;
+      justify-content: center;
+    }
+  
+    .pricing-card {
+      max-width: 100%;
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .pricing-title {
+      font-size: 1.6rem;
+    }
+  
+    .pricing-price {
+      font-size: 1.3rem;
+    }
+  
+    .pricing-button {
+      padding: 10px 25px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pricing-cards {
+      gap: 15px;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .pricing-title {
+      font-size: 1.4rem;
+    }
+  
+    .pricing-price {
+      font-size: 1.2rem;
+    }
+  
+    .pricing-button {
+      padding: 8px 20px;
+      font-size: 0.8rem;
+    }
+  }
+  
