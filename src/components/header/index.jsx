@@ -57,15 +57,15 @@ const Header = () => {
 
  
   const images = [
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=TCS",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=YAMAHA",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=SAMSUNG",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=GL HITACHI",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=COGNIZANT",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=CAPGEMINI",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=DE.SHAW",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=GIRIKON",
-    "https://via.placeholder.com/200/1C1C1C/FFFFFF?text=QSPIDER",
+    "TCS",
+    "YAMAHA",
+    "SAMSUNG",
+    "GL HITACHI",
+    "COGNIZANT",
+    "CAPGEMINI",
+    "D.E. SHAW",
+    "GIRIKON",
+    "Q SPIDER",
   ];
 
  
@@ -283,30 +283,45 @@ const Header = () => {
 
       {/* Bouncing Circular "Explore More" Div */}
       <div
-        className={`hidden md:block fixed bottom-10 left-10 w-11 h-26 rounded-full border-2 flex items-center align-middle justify-center transition-all duration-300 ${
-          isDarkTheme ? "border-white text-white" : "border-black text-black"
-        }`}
-        style={{
-          animation: "bounce 2s infinite", // Bouncing animation
-          backgroundColor: "transparent",
-          justifyContent: "center",
-          alignItems: "center",
-          height:"82px",
-          marginLeft:"0.01%"
-        }}
-      >
-        <span
-          className="font-bold"
-          style={{
-            marginLeft: "2px",
-            fontSize: "10px",
-            textAlign: "center", // Center text inside the div
-          }}
-        >
-          Scroll Down.
-        </span>
-        
-      </div>
+  className={`hidden md:block fixed bottom-10 left-10 w-11 h-26 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
+    isDarkTheme ? "border-white text-white" : "border-black text-black"
+  }`}
+  style={{
+    animation: "bounce 2s infinite",
+    backgroundColor: "transparent",
+    height: "82px",
+    justifyContent: "center",
+    alignItems: "center",
+   
+  }}
+>
+  <span
+    className="font-bold"
+    style={{
+      marginLeft: "2px",
+      fontSize: "10px",
+      textAlign: "center", // Center text inside the div
+    }}
+  >
+    Scroll Down.
+  </span>
+</div>
+
+<style>
+  {`
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px); /* Move up */
+      }
+      100% {
+        transform: translateY(0); /* Move back to original position */
+      }
+    }
+  `}
+</style>
 
       {/* Theme Toggle Button */}
       
@@ -351,10 +366,10 @@ const Header = () => {
           <h2
             style={{
               textAlign: "center",
-              marginBottom: "16px",
+              marginBottom: "2px",
               color: isDarkTheme ? "white" : "black",
 
-              fontSize: "30px", // Default size
+              fontSize: "34px", // Default size
               fontFamily: "Overpass,sans-serif",
               fontWeight: "600",
             }}
